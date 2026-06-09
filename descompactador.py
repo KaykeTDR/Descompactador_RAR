@@ -1,10 +1,10 @@
 import rarfile 
 
-diretorio = '/home/kayke/Documentos/Beholder2_traducao.rar'
-senha = 'centraldetraducoes.net.br'
-destino ='/home/kayke/Documentos/beholder2'
+diretorio = input("Digite o caminho do arquivo RAR: ")
+senha = input("Digite a senha: ")
+destino = input("Digite a pasta de destino: diretorio ")
 
 with rarfile.RarFile(diretorio) as rf:
     rf.extractall(path=destino, pwd=senha)
 
-print(f'Arquivos extraodps para: {destino}')
+print(f'Arquivos extraidos para: {destino}')
